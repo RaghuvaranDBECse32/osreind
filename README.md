@@ -14,11 +14,6 @@ The form submission is handled entirely in the browser with EmailJS.
 No Python backend is required.
 
 The EmailJS configuration is located in the bottom of `osre-ind-consultancy.html`:
-
-- Service ID: `service_0ppuuon`
-- Template ID: `template_e6822bl`
-- Public key: `eoXpBsGVm3xqMOgiW`
-
 ## How to run
 
 ### Option 1: Open directly in the browser
@@ -42,23 +37,6 @@ If you want to serve the file locally, run this from the project directory:
 python -m http.server 8000
 ```
 
-Then open:
-
-```
-http://localhost:8000/osre-ind-consultancy.html
-```
-
-## EmailJS setup notes
-
-The page loads EmailJS from CDN:
-
-```html
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-```
-
-And initializes the library using the public key.
-
-The form uses `emailjs.sendForm(...)` to send data to your EmailJS template.
 
 ## Troubleshooting
 
