@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSRE IND – Mall & Retail Business Consultancy</title>
+  <meta name="description" content="OSRE IND Consultancy Services – Expert Mall & Retail Business Consultancy in Chennai. 360-degree solutions for mall management, commercial leasing, and retail business development.">
+  <meta property="og:title" content="OSRE IND – Mall & Retail Business Consultancy">
+  <meta property="og:description" content="Expert 360-degree solutions for mall management, retail operations, commercial leasing, and business development across India.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+    /* Art direction: Mall & Retail Consultancy → authoritative, professional, trustworthy
+       Palette: deep navy/charcoal primary, warm gold accent — signals authority + premium
+       Typography: Cormorant Garamond (display) + DM Sans (body) — classic authority meets modern clarity
+       Density: spacious — consultancy needs to project confidence, not clutter */
+
+    :root, [data-theme="light"] {
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+      --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+      --space-4: 1rem;    --space-5: 1.25rem; --space-6: 1.5rem;
+      --space-8: 2rem;    --space-10: 2.5rem; --space-12: 3rem;
+      --space-16: 4rem;   --space-20: 5rem;   --space-24: 6rem;
+      --space-32: 8rem;
+
+      --color-bg:             #f8f7f3;
+      --color-surface:        #faf9f6;
+      --color-surface-2:      #ffffff;
+      --color-surface-offset: #f1efe9;
+      --color-divider:        #e2ddd6;
+      --color-border:         #d6d1c8;
+
+      --color-text:           #1a1814;
+      --color-text-muted:     #6b6860;
+      --color-text-faint:     #a8a49d;
+      --color-text-inverse:   #f9f8f4;
+
+      /* Navy primary */
+      --color-primary:        #1b3a6b;
+      --color-primary-hover:  #142d54;
+      --color-primary-active: #0e2040;
+      --color-primary-highlight: #d0d9e8;
+
+      /* Gold accent */
+      --color-gold:           #c5920a;
+      --color-gold-hover:     #a67a08;
+      --color-gold-light:     #f5edd6;
+
+      --radius-sm: 0.375rem; --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;  --radius-xl: 1rem;
+      --radius-full: 9999px;
+
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+      --shadow-sm: 0 1px 2px rgba(26,24,20,0.06);
+      --shadow-md: 0 4px 12px rgba(26,24,20,0.08);
+      --shadow-lg: 0 12px 32px rgba(26,24,20,0.12);
+
+      --content-narrow: 640px;
+      --content-default: 960px;
+      --content-wide: 1200px;
+    }
+
+    [data-theme="dark"] {
+      --color-bg:             #121110;
+      --color-surface:        #171614;
+      --color-surface-2:      #1c1b18;
+      --color-surface-offset: #1e1d1a;
+      --color-divider:        #2a2924;
+      --color-border:         #333129;
+      --color-text:           #cccac6;
+      --color-text-muted:     #7a7872;
+      --color-text-faint:     #504e49;
+      --color-text-inverse:   #1a1814;
+      --color-primary:        #6b94cc;
+      --color-primary-hover:  #8aaed8;
+      --color-primary-active: #aac3e4;
+      --color-primary-highlight: #1e2a3a;
+      --color-gold:           #e4aa26;
+      --color-gold-hover:     #f0bc44;
+      --color-gold-light:     #2a2416;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #121110; --color-surface: #171614; --color-surface-2: #1c1b18;
+        --color-surface-offset: #1e1d1a; --color-divider: #2a2924; --color-border: #333129;
+        --color-text: #cccac6; --color-text-muted: #7a7872; --color-text-faint: #504e49;
+        --color-text-inverse: #1a1814; --color-primary: #6b94cc; --color-primary-hover: #8aaed8;
+        --color-primary-highlight: #1e2a3a; --color-gold: #e4aa26; --color-gold-light: #2a2416;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth; scroll-padding-top: 80px; text-rendering: optimizeLegibility;
+    }
+    body {
+      min-height: 100dvh; line-height: 1.6; font-family: var(--font-body);
+      font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg);
+    }
+    img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+    ul[role="list"], ol[role="list"] { list-style: none; }
+    input, button, textarea, select { font: inherit; color: inherit; }
+    h1, h2, h3, h4 { text-wrap: balance; line-height: 1.15; font-family: var(--font-display); }
+    p, li { text-wrap: pretty; max-width: 72ch; }
+    button { cursor: pointer; background: none; border: none; }
+    a, button, [role="button"] {
+      transition: color var(--transition-interactive), background var(--transition-interactive),
+                  border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    ::selection { background: color-mix(in oklch, var(--color-primary) 20%, transparent); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: color-mix(in oklch, var(--color-bg) 90%, transparent);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .header-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding: var(--space-4) var(--space-6);
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);
+    }
+    .site-logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-decoration: none; color: inherit;
+      min-width: 200px;
+    }
+    .site-logo-inner {
+      position: relative;
+      display: inline-flex;
+      width: 280px;
+      aspect-ratio: 3 / 1;
+      overflow: hidden;
+    }
+    .site-logo::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 35%, rgba(255,255,255,0.35) 45%, rgba(255,255,255,0.12) 55%, transparent 65%);
+      transform: translateX(-110%);
+      opacity: 0.4;
+      pointer-events: none;
+      animation: logo-shine 5s ease-in-out infinite 2s;
+    }
+    .site-logo-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .logo-img--base {
+      animation: logo-fade-base 10s ease-in-out infinite;
+    }
+    .logo-img--alt {
+      position: absolute;
+      inset: 0;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation: logo-fade-alt 10s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .site-logo:hover .site-logo-img {
+      transform: scale(1.015);
+      filter: brightness(1.04) saturate(1.03);
+    }
+    @keyframes logo-shine {
+      0%, 100% { transform: translateX(-110%); opacity: 0; }
+      45% { opacity: 0.4; }
+      50% { transform: translateX(110%); opacity: 0; }
+    }
+    @keyframes logo-fade-base {
+      0%, 45% { opacity: 1; }
+      50% { opacity: 0.35; }
+      55%, 100% { opacity: 0; }
+    }
+    @keyframes logo-fade-alt {
+      0%, 45% { opacity: 0; }
+      50% { opacity: 0.35; }
+      55%, 100% { opacity: 1; }
+    }
+
+    .logo-mark { flex-shrink: 0; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+    .logo-name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--color-primary); letter-spacing: 0.04em; }
+    .logo-tagline { font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .site-nav { display: flex; align-items: center; gap: var(--space-1); }
+    .nav-link {
+      font-size: var(--text-sm); font-weight: 500; color: var(--color-text-muted);
+      text-decoration: none; padding: var(--space-2) var(--space-3); border-radius: var(--radius-md);
+    }
+    .nav-link:hover { color: var(--color-text); background: var(--color-surface-offset); }
+    .nav-cta {
+      font-size: var(--text-sm); font-weight: 600; color: var(--color-text-inverse);
+      background: var(--color-primary); padding: var(--space-2) var(--space-5);
+      border-radius: var(--radius-full); text-decoration: none; margin-left: var(--space-2);
+    }
+    .nav-cta:hover { background: var(--color-primary-hover); }
+
+    .header-actions { display: flex; align-items: center; gap: var(--space-2); }
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: var(--radius-full);
+      color: var(--color-text-muted); border: 1px solid var(--color-border);
+    }
+    .theme-toggle:hover { color: var(--color-text); background: var(--color-surface-offset); }
+
+    .mobile-menu-btn { display: none; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-md); color: var(--color-text); }
+    .mobile-nav { display: none; }
+
+    @media (max-width: 768px) {
+      .site-nav { display: none; }
+      .nav-cta-desktop { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .mobile-nav {
+        display: none; position: fixed; inset: 0; z-index: 200;
+        background: var(--color-bg); flex-direction: column; padding: var(--space-6);
+      }
+      .mobile-nav.open { display: flex; }
+      .mobile-nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-8); }
+      .mobile-nav-links { display: flex; flex-direction: column; gap: var(--space-2); }
+      .mobile-nav-link {
+        font-size: var(--text-lg); font-weight: 500; color: var(--color-text);
+        text-decoration: none; padding: var(--space-3) var(--space-4); border-radius: var(--radius-md);
+      }
+      .mobile-nav-link:hover { background: var(--color-surface-offset); }
+      .mobile-nav-cta {
+        margin-top: var(--space-8); display: block; text-align: center;
+        background: var(--color-primary); color: var(--color-text-inverse);
+        padding: var(--space-4); border-radius: var(--radius-lg); font-weight: 600;
+        text-decoration: none; font-size: var(--text-base);
+      }
+    }
+
+    /* ── HERO ───────────────────────────────── */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: 88vh; display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0d2548 60%, #091b38 100%);
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; opacity: 0.04;
+      background-image: repeating-linear-gradient(
+        45deg, white 0px, white 1px, transparent 1px, transparent 20px
+      );
+    }
+    .hero-content {
+      position: relative; z-index: 2; max-width: var(--content-wide);
+      margin-inline: auto; padding: clamp(var(--space-16), 10vw, var(--space-32)) var(--space-6);
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: rgba(197,146,10,0.18); border: 1px solid rgba(197,146,10,0.35);
+      color: #e8b84b; padding: var(--space-1) var(--space-4); border-radius: var(--radius-full);
+      font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: var(--space-6);
+    }
+    .hero-title {
+      font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700;
+      color: #ffffff; line-height: 1.1; margin-bottom: var(--space-6);
+    }
+    .hero-title span { color: #e8b84b; }
+    .hero-desc {
+      font-size: var(--text-base); color: rgba(255,255,255,0.75);
+      line-height: 1.7; margin-bottom: var(--space-8); max-width: 52ch;
+    }
+    .hero-actions { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      background: var(--color-gold); color: #1a1814;
+      padding: var(--space-4) var(--space-8); border-radius: var(--radius-full);
+      font-weight: 700; font-size: var(--text-sm); text-decoration: none;
+      box-shadow: 0 4px 20px rgba(197,146,10,0.4);
+    }
+    .btn-primary:hover { background: var(--color-gold-hover); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      border: 1.5px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.9);
+      padding: var(--space-4) var(--space-8); border-radius: var(--radius-full);
+      font-weight: 600; font-size: var(--text-sm); text-decoration: none;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+    .hero-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-xl); padding: var(--space-6);
+      backdrop-filter: blur(8px);
+    }
+    .stat-number {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: #e8b84b; line-height: 1;
+    }
+    .stat-label { font-size: var(--text-xs); color: rgba(255,255,255,0.6); margin-top: var(--space-2); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    @media (max-width: 768px) {
+      .hero-content { grid-template-columns: 1fr; gap: var(--space-12); text-align: center; }
+      .hero-desc { max-width: 100%; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-actions { justify-content: center; }
+    }
+
+    /* ── SECTIONS ───────────────────────────── */
+    .section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
+    .container { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+    .container-narrow { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); }
+
+    .section-eyebrow {
+      font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--color-gold); margin-bottom: var(--space-3);
+    }
+    .section-title {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700;
+      color: var(--color-text); line-height: 1.15; margin-bottom: var(--space-4);
+    }
+    .section-desc { font-size: var(--text-base); color: var(--color-text-muted); max-width: 60ch; line-height: 1.7; }
+
+    /* ── ABOUT STRIP ────────────────────────── */
+    .about-strip {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .about-inner {
+      max-width: var(--content-wide); margin-inline: auto; padding: clamp(var(--space-12), 6vw, var(--space-20)) var(--space-6);
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: var(--space-16); align-items: center;
+    }
+    .about-label { font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-gold); margin-bottom: var(--space-3); }
+    .about-title { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-5); }
+    .about-text { font-size: var(--text-base); color: var(--color-text-muted); line-height: 1.75; margin-bottom: var(--space-4); }
+    .about-features { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-6); }
+    .about-feature {
+      display: flex; align-items: flex-start; gap: var(--space-3);
+      padding: var(--space-4); background: var(--color-bg);
+      border-radius: var(--radius-lg); border: 1px solid var(--color-divider);
+    }
+    .feature-icon-wrap {
+      width: 36px; height: 36px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      background: var(--color-gold-light); border-radius: var(--radius-md); color: var(--color-gold);
+    }
+    .feature-text h4 { font-size: var(--text-sm); font-weight: 700; color: var(--color-text); margin-bottom: 2px; }
+    .feature-text p { font-size: var(--text-xs); color: var(--color-text-muted); }
+    .ceo-card {
+      background: var(--color-primary); border-radius: var(--radius-xl); padding: var(--space-8);
+      color: var(--color-text-inverse);
+    }
+    .ceo-title { font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.6; margin-bottom: var(--space-2); }
+    .ceo-name { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; margin-bottom: var(--space-4); }
+    .ceo-role { font-size: var(--text-sm); opacity: 0.8; margin-bottom: var(--space-6); }
+    .ceo-divider { height: 1px; background: rgba(255,255,255,0.15); margin-bottom: var(--space-6); }
+    .ceo-contact { display: flex; flex-direction: column; gap: var(--space-3); }
+    .ceo-contact-item { display: flex; align-items: center; gap: var(--space-3); font-size: var(--text-sm); opacity: 0.85; }
+    .ceo-contact-item svg { opacity: 0.6; flex-shrink: 0; }
+
+    @media (max-width: 768px) {
+      .about-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── SERVICES ───────────────────────────── */
+    .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); margin-top: var(--space-10); }
+    .service-card {
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition-interactive), transform var(--transition-interactive);
+    }
+    .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .service-card-header {
+      padding: var(--space-8) var(--space-8) var(--space-5);
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0d2548 100%);
+    }
+    .service-card-icon {
+      width: 48px; height: 48px; background: rgba(255,255,255,0.12);
+      border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center;
+      color: #e8b84b; margin-bottom: var(--space-4);
+    }
+    .service-card-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: white; }
+    .service-card-body { padding: var(--space-6) var(--space-8); }
+    .service-list { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .service-list li {
+      display: flex; align-items: flex-start; gap: var(--space-3);
+      font-size: var(--text-sm); color: var(--color-text-muted); padding: var(--space-2) 0;
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .service-list-check { color: var(--color-gold); flex-shrink: 0; margin-top: 2px; }
+
+    @media (max-width: 768px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── BRANDS ─────────────────────────────── */
+    .brands-section { background: var(--color-surface); border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); }
+    .brands-header { text-align: center; margin-bottom: var(--space-10); }
+    .brands-logo-row {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      gap: var(--space-8); margin-top: var(--space-8);
+    }
+    .brand-item {
+      display: flex; align-items: center; justify-content: center;
+      padding: var(--space-4) var(--space-6); background: var(--color-bg);
+      border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+      min-width: 140px;
+    }
+    .brand-name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: var(--color-text-muted); }
+
+    /* ── WHY OSRE ────────────────────────────── */
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
+    .why-card { padding: var(--space-6); }
+    .why-number { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 700; color: var(--color-gold); opacity: 0.3; line-height: 1; margin-bottom: var(--space-3); }
+    .why-title { font-size: var(--text-base); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-2); }
+    .why-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.7; }
+
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── CONTACT ────────────────────────────── */
+    .contact-section { background: var(--color-primary); }
+    .contact-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding: clamp(var(--space-12), 8vw, var(--space-24)) var(--space-6);
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-16); align-items: start;
+    }
+    .contact-title { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 700; color: white; margin-bottom: var(--space-5); line-height: 1.2; }
+    .contact-desc { font-size: var(--text-base); color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: var(--space-8); }
+    .contact-details { display: flex; flex-direction: column; gap: var(--space-5); }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: var(--space-4);
+      padding: var(--space-4); background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg);
+    }
+    .contact-icon { color: #e8b84b; flex-shrink: 0; margin-top: 2px; }
+    .contact-item-label { font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: var(--space-1); }
+    .contact-item-value { font-size: var(--text-sm); color: rgba(255,255,255,0.9); font-weight: 500; }
+    .contact-item-value a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    .contact-item-value a:hover { color: white; text-decoration: underline; }
+
+    .contact-form-wrap { background: var(--color-surface); border-radius: var(--radius-xl); padding: var(--space-8); }
+    .form-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: var(--color-text); margin-bottom: var(--space-6); }
+    .form-group { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-4); }
+    .form-label { font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); }
+    .form-input, .form-textarea, .form-select {
+      width: 100%; padding: var(--space-3) var(--space-4);
+      background: var(--color-bg); border: 1px solid var(--color-border);
+      border-radius: var(--radius-md); font-size: var(--text-sm); color: var(--color-text);
+      transition: border-color var(--transition-interactive);
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-highlight); }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%; padding: var(--space-4); background: var(--color-primary);
+      color: white; border: none; border-radius: var(--radius-md); font-size: var(--text-sm);
+      font-weight: 700; cursor: pointer; margin-top: var(--space-2);
+      transition: background var(--transition-interactive);
+    }
+    .form-submit:hover { background: var(--color-primary-hover); }
+    .form-success { display: none; text-align: center; padding: var(--space-8); color: var(--color-primary); }
+    .form-success svg { margin: 0 auto var(--space-3); color: #438a22; }
+
+    @media (max-width: 768px) {
+      .contact-inner { grid-template-columns: 1fr; }
+    }
+
+    /* ── FOOTER ─────────────────────────────── */
+    .site-footer {
+      background: #0a1a32; color: rgba(255,255,255,0.6);
+      padding-block: var(--space-10);
+    }
+    .footer-inner {
+      max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6);
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: var(--space-4);
+    }
+    .footer-logo-text { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 700; color: white; }
+    .footer-copy { font-size: var(--text-xs); }
+    .footer-links { display: flex; gap: var(--space-4); }
+    .footer-links a { font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-links a:hover { color: white; }
+  </style>
+</head>
+<body>
+
+<!-- Skip link -->
+<a href="#main-content" style="position:absolute;top:-40px;left:0;background:var(--color-primary);color:white;padding:8px 16px;z-index:999;border-radius:0 0 8px 0;font-size:14px" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to content</a>
+
+<!-- ── HEADER ── -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <a href="#" class="site-logo" aria-label="OSRE IND – Home">
+      <span class="site-logo-inner">
+        <img src="1.png" alt="OSRE IND – Consultancy Services" class="site-logo-img logo-img--base">
+        <img src="2.png" alt="OSRE IND – Consultancy Services" class="site-logo-img logo-img--alt" aria-hidden="true">
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#brands" class="nav-link">Clients</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="#contact" class="nav-cta nav-cta-desktop">Get in Touch</a>
+      <button class="mobile-menu-btn" aria-label="Open menu" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile menu">
+  <div class="mobile-nav-header">
+    <span style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--color-primary)">OSRE IND</span>
+    <button onclick="document.querySelector('.mobile-nav').classList.remove('open')" aria-label="Close menu" style="cursor:pointer;background:none;border:none;color:var(--color-text)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#about" class="mobile-nav-link" onclick="document.querySelector('.mobile-nav').classList.remove('open')">About</a>
+    <a href="#services" class="mobile-nav-link" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Services</a>
+    <a href="#brands" class="mobile-nav-link" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Clients</a>
+    <a href="#contact" class="mobile-nav-link" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Contact</a>
+  </div>
+  <a href="#contact" class="mobile-nav-cta" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Get in Touch</a>
+</div>
+
+<main id="main-content">
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg-pattern" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div>
+        <div class="hero-badge" aria-label="360-degree consultancy">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          360° Professional Solutions
+        </div>
+        <h1 class="hero-title">India's Trusted<br><span>Mall & Retail</span><br>Consultancy</h1>
+        <p class="hero-desc">OSRE IND Consultancy Services delivers end-to-end expertise in mall management, retail business development, and commercial leasing — empowering your business to grow with confidence.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn-primary">
+            Explore Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="Key metrics">
+        <div class="stat-card">
+          <div class="stat-number">360°</div>
+          <div class="stat-label">Degree Solutions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Core Verticals</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Service Areas</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Pan</div>
+          <div class="stat-label">India Presence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="about-strip section" id="about" aria-labelledby="about-title">
+    <div class="about-inner">
+      <div>
+        <div class="about-label">Who We Are</div>
+        <h2 class="about-title" id="about-title">Specialists in Mall & Retail Business Excellence</h2>
+        <p class="about-text">OSRE IND Consultancy Services is a Chennai-based firm providing comprehensive professional expertise across mall management and retail operations. With deep industry knowledge and hands-on experience, we help property owners, retailers, and investors unlock maximum value from their assets.</p>
+        <p class="about-text">Led by seasoned professionals, our team brings together decades of experience in commercial leasing, business development, facility management, and retail franchising to deliver solutions that are both strategic and practical.</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Mall Management Expertise</h4>
+              <p>End-to-end operational excellence for shopping centres</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Retail Business Consulting</h4>
+              <p>Growth strategies, franchising, and new market entry</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="feature-icon-wrap" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="feature-text">
+              <h4>Pan-India Network</h4>
+              <p>Connecting brands with the right spaces across India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ceo-card" aria-label="CEO profile">
+        <div class="ceo-title">Leadership</div>
+        <div class="ceo-name">Damodaran Radhakrishnan</div>
+        <div class="ceo-role">Chief Executive Officer — Mall Management</div>
+        <div class="ceo-divider"></div>
+        <div class="ceo-contact">
+          <div class="ceo-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>md@osreindia.com</span>
+          </div>
+          <div class="ceo-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 94455 18557</span>
+          </div>
+          <div class="ceo-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Chennai, Tamil Nadu</span>
+          </div>
+          <div class="ceo-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://www.linkedin.com/in/damodaran-radhakrishnan-98854078/" target="_blank" rel="noopener">linkedin.com/in/damodaran-radhakrishnan-98854078</a>
+          </div>
+  </section>
+
+  <!-- ── SERVICES ── -->
+  <section class="section" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title" id="services-title">360° Professional Solutions</h2>
+      <p class="section-desc">We offer end-to-end consultancy across two core verticals — providing everything from strategic planning to on-the-ground execution.</p>
+      <div class="services-grid">
+
+        <!-- Mall Services -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <h3 class="service-card-title">Mall Management</h3>
+          </div>
+          <div class="service-card-body">
+            <ul class="service-list" role="list">
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Mall Business Analysis &amp; Expertise Solutions</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Expertise Asset Audits &amp; Asset Life Reporting</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Project Management &amp; New Store Fit-Outs</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zoning – Business Development &amp; New Brand Identification</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Commercial Leasing – Retail &amp; Office Spaces</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Facility &amp; Maintenance Operations within CAM Budget</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Retail Services -->
+        <div class="service-card">
+          <div class="service-card-header">
+            <div class="service-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="service-card-title">Retail Business</h3>
+          </div>
+          <div class="service-card-body">
+            <ul class="service-list" role="list">
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Business Analysis &amp; Expertise Solutions</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Inventory Stock Audits &amp; TPA Reporting</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Project Management &amp; New Store Opening</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Business Development &amp; New Property Identifying</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Commercial Leasing – Retail &amp; Warehousing</span>
+              </li>
+              <li>
+                <svg class="service-list-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Business Franchising &amp; New Franchisee Appointment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY OSRE ── -->
+  <section class="section" style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)" aria-labelledby="why-title">
+    <div class="container-narrow" style="text-align:center">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="section-title" id="why-title" style="max-width:20ch;margin-inline:auto">What Sets OSRE IND Apart</h2>
+    </div>
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">01</div>
+          <div class="why-title">Deep Industry Experience</div>
+          <p class="why-desc">Decades of hands-on expertise in mall and retail operations across India's diverse commercial landscape.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">02</div>
+          <div class="why-title">End-to-End Solutions</div>
+          <p class="why-desc">From strategic business analysis to on-ground project execution — one partner for every phase of your growth.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">03</div>
+          <div class="why-title">Trusted Brand Relationships</div>
+          <p class="why-desc">Established network with leading Indian retail brands including Ramraj Cotton, enabling faster leasing and development cycles.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">04</div>
+          <div class="why-title">CAM-Optimized Operations</div>
+          <p class="why-desc">We deliver facility excellence while maintaining tight control on common area maintenance budgets — maximising NOI.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">05</div>
+          <div class="why-title">Franchising Expertise</div>
+          <p class="why-desc">Specialized capability in identifying, onboarding, and supporting new franchisees for retail expansion across territories.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number" aria-hidden="true">06</div>
+          <div class="why-title">Chennai-Based, India-Focused</div>
+          <p class="why-desc">Headquartered in Chennai with strong ties across South India, expanding to serve clients across the subcontinent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRANDS ── -->
+  <section class="brands-section section" id="brands" aria-labelledby="brands-title">
+    <div class="container">
+      <div class="brands-header">
+        <div class="section-eyebrow">Our Clients</div>
+        <h2 class="section-title" id="brands-title" style="max-width:30ch;margin-inline:auto">Brands Served by Us Over the Years</h2>
+        <p class="section-desc" style="margin-inline:auto;text-align:center">We have had the privilege of working with some of India's most recognised retail brands, delivering measurable results and lasting partnerships.</p>
+      </div>
+      <div class="brands-logo-row">
+        <div class="brand-item" aria-label="Ramraj Cotton">
+          <img src="Ramraj real1.png" alt="RAMRAJ" style="max-width: 100%; height: auto;">
+        </div>
+        <div class="brand-item" aria-label="Retail partner">
+          <span class="brand-name">+ More Brands</span>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:var(--space-8);font-size:var(--text-sm);color:var(--color-text-muted)">Contact us to learn more about our full portfolio of served clients.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="contact-section section" id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <div>
+        <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#e8b84b;margin-bottom:var(--space-3)">Get in Touch</div>
+        <h2 class="contact-title" id="contact-title">Let's Grow<br>Your Business<br>Together</h2>
+        <p class="contact-desc">We're ready to provide expert consultancy tailored to your mall or retail business needs. Reach out to us and let's start a conversation.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.13 12.81 19.79 19.79 0 0 1 1.06 4.18 2 2 0 0 1 3.05 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone (CEO)</div>
+              <div class="contact-item-value"><a href="tel:+919445518557">+91 94455 18557</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:md@osreindia.com">md@osreindia.com</a></div>
+            </div>
+          </div>
+        </div>
+
+      <div class="contact-form-wrap">
+        <h3 class="form-title">Send Us a Message</h3>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name *</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address *</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="user_type">User Type</label>
+            <select class="form-select" id="user_type" name="user-type">
+              <option value="">Select user type…</option>
+              <option value="owner">Owner</option>
+              <option value="broker">Broker</option>
+              <option valuetemplate_e6822bl="third-party">Third Party</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="area">Area / Square Feet</label>
+            <input class="form-input" type="text" id="area" name="area" placeholder="e.g. 50,000 sq ft">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="location">Location</label>
+            <input class="form-input" type="text" id="location" name="location" placeholder="City / address / zone">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="location_link">Location Link</label>
+            <input class="form-input" type="url" id="location_link" name="location_link" placeholder="Google Maps / Leaflet share URL">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="landmarks">Nearby Landmarks</label>
+            <input class="form-input" type="text" id="landmarks" name="landmarks" placeholder="E.g. metro station, highway, mall">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="current_value">Current Land Value</label>
+            <input class="form-input" type="text" id="current_value" name="current_value" placeholder="e.g. ₹120/sq ft">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="floors">No. of Floors / Preferred Floor</label>
+            <select class="form-select" id="floors" name="floors">
+              <option value="">Select floor preference…</option>
+              <option value="ground">Ground</option>
+              <option value="first">First</option>
+              <option value="ground-first">Ground + First</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="litigation">Litigations / Legal Issues</label>
+            <textarea class="form-textarea" id="litigation" name="litigation" placeholder="List any litigation / legal concerns"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="media_link">Google Drive / Media Link</label>
+            <input class="form-input" type="url" id="media_link" name="media_link" placeholder="https://drive.google.com/...">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Service of Interest</label>
+            <select class="form-select" id="service" name="service">
+              <option value="">Select a service…</option>
+              <option value="mall-management">Mall Management</option>
+              <option value="retail-consulting">Retail Business Consulting</option>
+              <option value="commercial-leasing">Commercial Leasing</option>
+              <option value="project-management">Project Management</option>
+              <option value="franchising">Business Franchising</option>
+              <option value="other">Other / General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message *</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your business needs…" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+        <div class="form-success" id="form-success" aria-live="polite">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h4 style="font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-2)">Message Sent!</h4>
+          <p style="color:var(--color-text-muted);font-size:var(--text-sm)">Thank you for reaching out. We'll get back to you within 1 business day.</p>
+        </div>
+        <div class="form-error" id="form-error" aria-live="polite" style="display:none;color:#b33;font-size:0.95rem;margin-top:var(--space-4)">Unable to send the message right now. Please try again or email us directly at <a href="mailto:md@osreindia.com">md@osreindia.com</a>.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-text">OSRE IND</div>
+      <div style="font-size:var(--text-xs);color:rgba(255,255,255,0.35);margin-top:4px">Mall &amp; Retail Business Consultancy Services</div>
+    </div>
+    <div class="footer-copy">
+      © 2026 OSRE IND Consultancy Services. All rights reserved.<br>
+      <span style="opacity:0.6">Chennai, Tamil Nadu, India</span>
+    </div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+  // EmailJS initialization
+  emailjs.init("eoXpBsGVm3xqMOgiW"); // Your public key
+
+  // Theme toggle
+  (function(){
+    const t=document.querySelector('[data-theme-toggle]');
+    const r=document.documentElement;
+    let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';
+    r.setAttribute('data-theme',d);
+    if(t){
+      t.innerHTML=d==='dark'
+        ?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        :'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');
+      t.addEventListener('click',function(){
+        d=d==='dark'?'light':'dark';
+        r.setAttribute('data-theme',d);
+        t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');
+        t.innerHTML=d==='dark'
+          ?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          :'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      });
+    }
+  })();
+
+  // Contact form submission
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const form = this;
+    const submitBtn = form.querySelector('.form-submit');
+    const successDiv = document.getElementById('form-success');
+    const errorDiv = document.getElementById('form-error');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    successDiv.style.display = 'none';
+    errorDiv.style.display = 'none';
+
+    emailjs.sendForm('service_0ppuuon', 'template_e6822bl', form) // Your service and template IDs
+      .then(function() {
+        successDiv.style.display = 'block';
+        form.reset();
+      }, function(error) {
+        console.error('EmailJS error:', error);
+        errorDiv.style.display = 'block';
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      });
+  });
+
+  // Scroll reveal animation
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.style.opacity='1';
+        entry.target.style.transform='translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.08});
+  document.querySelectorAll('.service-card,.why-card,.stat-card,.about-feature,.contact-item').forEach(el=>{
+    el.style.opacity='0';
+    el.style.transform='translateY(20px)';
+    el.style.transition='opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
